@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 mt-5">
+                <form action="/signup/" method="POST" class="card card-body">
+                    <h1 class="text-center">SignUp page</h1>
+                    {% if error %}
+                        <p> {{ error }} </p>
+                    {% endif %}
+                    
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="username">Username</label><br>
+                        <input type="text" class="form-contol" name="username" id="username" placeholder="Username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password1 class="form-control">Password</label><br>
+                        <input type="password" class="form-contol" name="password1" id="password1" placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password2">Confirm Password</label><br>
+                        <input type="password" class="form-contol" name="password2" "class="form-control"" id="password2" placeholder="Confirm Password">
+                    </div>
+                    <button class="form-control">
+                        enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
+
+
+
+
+
